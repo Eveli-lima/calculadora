@@ -1,0 +1,114 @@
+/* Reset e Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f2f5;
+    transition: background 0.3s ease;
+}
+
+/* Estrutura da Calculadora */
+.calculator {
+    width: 320px;
+    background: #22252D;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Visor */
+.display {
+    margin-bottom: 20px;
+}
+
+.display input {
+    width: 100%;
+    height: 80px;
+    border: none;
+    background: #2a2d37;
+    border-radius: 12px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: right;
+    padding: 15px;
+    font-weight: 500;
+}
+
+.display input::placeholder {
+    color: #a0a0a0;
+}
+
+/* Grid de Botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Estilo Geral dos Botões */
+.button {
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: #2a2d37;
+    color: #f9f9f9;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+/* Estilos Específicos para cada tipo de botão */
+.button.number, .button.zero {
+    background: #333740;
+}
+
+.button.operator {
+    background: #007bff;
+    color: #fff;
+}
+
+.button.function {
+    background: #6c757d;
+    color: #fff;
+}
+
+.button.equals {
+    background: #28a745;
+    color: #fff;
+}
+
+
+/* O botão zero também ocupa 2 colunas */
+.button.zero {
+    grid-column: span 2;
+}
+
+/* Efeitos de Hover para feedback visual */
+.button.number:hover {
+    background: #4a4e58;
+}
+
+.button.operator:hover {
+    background: #0056b3;
+}
+
+.button.function:hover {
+    background: #5a6268;
+}
+
+.button.equals:hover {
+    background: #218838;
+}
